@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIJOY | Cyber Security Specialist</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+        }
+        
+        .profile-img-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(255, 75, 43, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        .default-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: white;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(255, 75, 43, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 75, 43, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(255, 75, 43, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 75, 43, 0);
+            }
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        .nickname {
+            font-size: 1.5rem;
+            color: #ff4b2b;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ff4b2b;
+            display: flex;
+            align-items: center;
+        }
+        
+        h2 i {
+            margin-right: 10px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .info-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .info-item i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #ff4b2b;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill {
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            animation: rotate 3s infinite linear;
+        }
+        
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .social-link:hover {
+            transform: scale(1.2);
+            animation: none;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .heart {
+            color: #ff4b2b;
+            animation: heartbeat 1.5s infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            5% {
+                transform: scale(1.2);
+            }
+            10% {
+                transform: scale(1);
+            }
+            15% {
+                transform: scale(1.3);
+            }
+            50% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .profile-img-container, .default-avatar {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .default-avatar {
+                font-size: 60px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile-img-container">
+                <!-- আপনার ছবি এখন দেখাবে -->
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhwM2wsX3zNsb9asaACwIHHMNcU-TPod0pB4haQnFBPz0MivV1lW7fM3M52bKcqvhyCnFkA86nyJtfiQMH9B1OEiNdnfKY2ChPUFQD-zY0uPE2dSiE6Y648KK-1J73W9vjLgmTO8dRhyphenhypheng_66_PZwHhISCYLFnkwJp8EE1vXH5kNNe2R2uTd7EI0eDCKBR4b/s800/IMG_20251031_023556_744.jpg" alt="BIJOY" class="profile-img" onerror="this.style.display='none'; document.querySelector('.default-avatar').style.display='flex';">
+                
+                <!-- যদি ছবি লোড না হয় তাহলে এই ডিফল্ট অ্যাভাটার দেখাবে -->
+                <div class="default-avatar" style="display: none;">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+            </div>
+            <h1>BIJOY</h1>
+            <div class="nickname">B̷l̷a̷c̷k̷ H̴e̴r̴r̴y̴</div>
+        </header>
+        
+        <div class="section">
+            <h2><i class="fas fa-user"></i> Personal Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fas fa-briefcase"></i>
+                    <div>
+                        <strong>Founder & CEO</strong><br>
+                        Cyber Sentinel Bangladesh & CSB Cyber Security Agency
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Location</strong><br>
+                        Bangladesh 🇧🇩
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-birthday-cake"></i>
+                    <div>
+                        <strong>Birth</strong><br>
+                        31 DECEMBER
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <strong>Blood Group</strong><br>
+                        B+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-laptop-code"></i> What I Do</h2>
+            <div class="skills">
+                <div class="skill">🛡 Cyber Security Specialist</div>
+                <div class="skill">💻 Web & App Developer</div>
+                <div class="skill">🤖 Telegram Bot Maker</div>
+                <div class="skill">💻 Ethical Hacker (Grey Hat)</div>
+                <div class="skill">🔍 Digital Investigator</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-heart"></i> Hobbies</h2>
+            <div class="skills">
+                <div class="skill">📱 Coding</div>
+                <div class="skill">🎮 Gaming</div>
+                <div class="skill">🧠 Research</div>
+                <div class="skill">🔬 Tech Exploration</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-paper-plane"></i> Telegram IDs</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <i class="fab fa-telegram"></i>
+                    <div>
+                        <strong>Main ID</strong><br>
+                        @blackherry_csb
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <div>
+                        <strong>Channel</strong><br>
+                        @cybersentinelbangladesh
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <strong>Group</strong><br>
+                        @csbfflike
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <strong>Bot</strong><br>
+                        @CSBTools_Bot
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <strong>Email</strong><br>
+                    support@csbagency.shop
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-tasks"></i> Current Work</h2>
+            <div class="skills">
+                <div class="skill">😀 Telegram Automation Projects</div>
+                <div class="skill">🧪 Cyber Security Research</div>
+                <div class="skill">🎯 Web & System Development</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2><i class="fas fa-exclamation-triangle"></i> Disclaimer</h2>
+            <p>I strictly work for educational & ethical purposes only.</p>
+            <p>❌ No illegal activity is supported.</p>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://t.me/mybiocsb" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
+            <a href="mailto:support@csbagency.shop" class="social-link"><i class="fas fa-envelope"></i></a>
+            <a href="#" class="social-link"><i class="fas fa-globe"></i></a>
+        </div>
+        
+        <footer>
+            <p>❤ <span class="heart">THANK YOU FOR VISITING MY BIO!</span> ❤</p>
+            <p>React with <span class="heart">❤</span> if you support Cyber Security Awareness!</p>
+        </footer>
+    </div>
+
+    <script>
+        // ছবি লোড চেক করার জন্য
+        document.addEventListener('DOMContentLoaded', function() {
+            const profileImg = document.querySelector('.profile-img');
+            const defaultAvatar = document.querySelector('.default-avatar');
+            
+            // যদি ছবি লোড না হয়
+            if (profileImg && profileImg.complete && profileImg.naturalHeight === 0) {
+                profileImg.style.display = 'none';
+                defaultAvatar.style.display = 'flex';
+            }
+            
+            // সোশ্যাল লিঙ্কগুলোর জন্য টুলটিপ যোগ করা
+            const socialLinks = document.querySelectorAll('.social-link');
+            socialLinks.forEach(link => {
+                link.setAttribute('title', 'Click to open');
+            });
+        });
+    </script>
+</body>
+  </html>
